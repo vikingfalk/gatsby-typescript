@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "gatsby";
 
 interface ArticleCardProps {
   id: string;
@@ -54,7 +55,9 @@ const articleCard = (props: { data: ArticleCardProps }) => {
           <p>{data.description.description}</p>
         </CardContent>
         <p>{`${new Date(data.createdAt).toLocaleString("sv-SE")}`}</p>
-        <ButtonComponent>See article</ButtonComponent>
+        <ButtonComponent>
+          <Link to={data.slug}>See article</Link>
+        </ButtonComponent>
       </Card>
     </>
   );
