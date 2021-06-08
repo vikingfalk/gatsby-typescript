@@ -1,6 +1,5 @@
 import React, { ReactNode } from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import styled from "styled-components";
 import { ContentContainer } from "../styles/genericStyles";
 import "./layout.css";
 

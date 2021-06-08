@@ -1,12 +1,12 @@
 import * as React from "react";
-import { Link, useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import ArticleCard from "../components/articleCard";
 
 const IndexPage = () => {
-  const data = useStaticQuery(graphql`
+  const data: any = useStaticQuery(graphql`
     query {
       allContentfulSitePost(sort: { order: DESC, fields: createdAt }) {
         edges {
@@ -24,9 +24,7 @@ const IndexPage = () => {
     }
   `);
 
-  console.log(data);
-  const articles = data.allContentfulSitePost.edges;
-  console.log(articles);
+  const articles: any = data.allContentfulSitePost.edges;
 
   return (
     <Layout>
